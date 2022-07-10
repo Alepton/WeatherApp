@@ -1,0 +1,17 @@
+{% extends 'weather/base.html' %}
+
+{% block title %}
+    Удалить город
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Вы действительно хотите удалить город {{ info.city }}?</h3>
+    <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-success" type="submit">Подтвердить</button>
+    </form>
+</div>
+
+{% endblock %}
